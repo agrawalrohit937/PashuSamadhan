@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}Pashu Vaidya AI{% endblock %}
+
+{% block content %}
+<section class="disease-chatbot-section section-padding animate-fade-in">
+
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="bot-avatar">🩺</div>
+            <div class="bot-info">
+                <div class="bot-name">Pashu Vaidya AI</div>
+                <div class="bot-status">Online</div>
+            </div>
+        </div>
+
+        <div class="chat-window" id="chat-window">
+            </div>
+
+        <div class="chat-input-area">
+            <div id="quick-replies-container" class="quick-replies-container">
+                </div>
+            <!-- <div class="input-group" id="text-input-group" style="display: none;">
+                <input type="text" id="symptom-input" placeholder="Type a symptom...">
+                <button id="add-symptom-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Add</button>
+                <button id="get-diagnosis-btn" class="btn btn-secondary" disabled><i class="fas fa-search-plus"></i> Diagnose</button>
+            </div> -->
+            <div class="input-group" id="text-input-group" style="display: none;">
+                <input type="text" id="symptom-input" placeholder="Type a symptom...">
+                
+                <button id="add-symptom-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Add</button>
+                
+                <button id="get-diagnosis-btn" class="btn btn-secondary" disabled><i class="fas fa-search-plus"></i> Diagnose</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="{{ url_for('static', filename='js/disease.js') }}"></script>
+{% endblock %}

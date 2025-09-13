@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}Explore Breeds{% endblock %}
+
+{% block content %}
+    <section class="breeds-list-section section-padding animate-fade-in">
+        <h1>Explore Cattle Breeds</h1>
+        <p class="lead">Discover detailed information about various cattle breeds recognized by our system.</p>
+
+        <div class="breed-cards-grid">
+            {% for breed in breeds %}
+            <div class="breed-card animate-slide-up">
+                <div class="breed-image-wrapper">
+                    <img src="{{ url_for('static', filename='img/breeds/' + breed.image) }}" alt="{{ breed.name }}">
+                </div>
+                <div class="breed-info">
+                    <h3>{{ breed.name }}</h3>
+                    <p>{{ breed.description_short }}</p>
+                    <a href="{{ url_for('breed_detail', breed_name=breed.name) }}" class="btn btn-sm btn-outline"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            {% else %}
+            <p>No breed information available yet.</p>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

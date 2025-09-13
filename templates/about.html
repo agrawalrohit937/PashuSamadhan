@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <section class="about-section section-padding animate-fade-in">
+        <h1>About Smart Livestock</h1>
+        <p class="lead">Our mission is to empower the agricultural community with cutting-edge AI technology for enhanced livestock management and sustainable farming practices.</p>
+
+        <div class="content-grid">
+            <div class="text-block animate-slide-left">
+                <h2>Our Vision</h2>
+                <p>We envision a future where technology seamlessly integrates with traditional farming, providing actionable insights that lead to healthier animals, increased productivity, and more efficient resource utilization. Smart Livestock aims to be at the forefront of this transformation.</p>
+                <p>This project is proudly developed for the **Smart India Hackathon 2025**, showcasing innovative solutions for real-world challenges in agriculture.</p>
+            </div>
+            <div class="image-block animate-fade-in delay-1">
+                <img src="{{ url_for('static', filename='img/about_tech.png') }}" alt="Our Vision">
+            </div>
+        </div>
+
+        <div class="content-grid reverse-grid">
+            <div class="image-block animate-fade-in delay-2">
+                <img src="{{ url_for('static', filename='img/team.jpg') }}" alt="Our Team">
+            </div>
+            <div class="text-block animate-slide-right delay-3">
+                <h2>The Team Behind It</h2>
+                <p>We are a dedicated team of innovators from INVERTIS UIVERSITY, passionate about applying artificial intelligence to solve practical problems. Our diverse skills in machine learning, software development, and UI/UX design have come together to create Smart Livestock.</p>
+                <p><strong>Team Members:</strong></p>
+                <ul>
+                    <li>Faiz Ali Chishti - AI/ML</li>
+                    <li>Rohit Agrawal - AI/ML</li>
+                    <li>Trisha Bharadwaj - Power BI Visualization</li>
+                    <li>Shakir Hussain - Web Development</li>
+                    <li>Nitin Singh - Web Development</li>
+                    <li>Aniruddha Kushwaha - Data Handling</li>
+                    </ul>
+                <a href="#" class="btn btn-primary btn-small"><i class="fas fa-users"></i> Meet Our Mentors</a>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="text-block animate-slide-up delay-4">
+                <h2>Our Technology</h2>
+                <p>At the core of Smart Livestock is a powerful **EfficientNet-B3** deep learning model, pre-trained on a vast dataset and fine-tuned on specific cattle breeds. This allows for highly accurate and fast recognition. Our web platform is built with **Flask**, ensuring a robust, scalable, and secure environment, while **modern JavaScript and CSS** provide an interactive and beautiful user experience.</p>
+                <p>We leverage technologies like TensorFlow, OpenCV, and modern web standards to deliver a seamless and intelligent application.</p>
+                <a href="/predict" class="btn btn-secondary btn-small"><i class="fas fa-cogs"></i> See Our AI in Action</a>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

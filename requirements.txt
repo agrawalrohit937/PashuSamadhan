@@ -1,0 +1,8 @@
+Flask
+gunicorn  # Yeh production server hai
+tensorflow
+scikit-learn
+pandas
+joblib
+numpy
+opencv-python-headless # Headless version server ke liye best hai

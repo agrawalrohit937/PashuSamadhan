@@ -1,0 +1,10 @@
+# Virtual Environment
+venv/
+*.pyc
+
+# Local files
+.DS_Store
+
+# Uploads and cache
+/uploads/
+__pycache__/

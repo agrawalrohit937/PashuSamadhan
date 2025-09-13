@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}Predict Breed{% endblock %}
+
+{% block content %}
+<section class="prediction-engine section-padding animate-fade-in">
+
+    <div class="prediction-intro text-center">
+        <h1>AI Breed Predictor</h1>
+        <p class="lead">Simply drag and drop a cattle image or click to select a file.</p>
+    </div>
+
+    <div class="prediction-grid">
+        <div class="uploader-column">
+            <form id="upload-form" class="upload-area">
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <p class="upload-text"><strong>Drag & Drop Image Here</strong></p>
+                    <p class="upload-subtext">or</p>
+                    <input type="file" id="file-input" name="file" accept="image/*" hidden>
+                    <button type="button" id="browse-btn" class="btn btn-secondary">Browse File</button>
+                    <p id="file-name-display" class="file-name-display"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="results-column">
+            <div id="results-card" class="results-card">
+                <div id="results-placeholder" class="results-placeholder">
+                    <i class="fas fa-chart-bar results-icon"></i>
+                    <h3>Prediction Results</h3>
+                    <p>Your results will appear here.</p>
+                </div>
+
+                <div id="loading-spinner" class="loading-spinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>AI is Analyzing...</p>
+                </div>
+
+                <div id="prediction-output" class="prediction-output" style="display: none;">
+                    <div class="result-image-wrapper">
+                        <img src="" alt="Uploaded Cattle" id="result-image">
+                    </div>
+                    <!-- <div class="result-details-wrapper">
+                        <h3>Top Predictions</h3>
+                        <ul id="breed-list" class="breed-list">
+                            </ul>
+                        <button id="reset-btn" type="button" class="btn btn-primary"><i class="fas fa-redo"></i> Analyze Another</button>
+                    </div> -->
+                    <div class="result-details-wrapper">
+                        <h3>Top Predictions</h3>
+                        <ul id="breed-list" class="breed-list">
+                            </ul>
+
+                        <div id="milk-yield-container" class="milk-yield-container" style="display: none;">
+                            <h4><i class="fas fa-glass-whiskey"></i> Average Milk Yield</h4>
+                            <p id="milk-yield-value"></p>
+                        </div>
+                        <button id="reset-btn" type="button" class="btn btn-primary"><i class="fas fa-redo"></i> Analyze Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+{% endblock %}
