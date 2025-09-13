@@ -7,3 +7,5 @@ joblib
 numpy
 opencv-python-headless # Headless version server ke liye best hai
 xgboost
+lightgbm
+scikit-learn==1.4.2
