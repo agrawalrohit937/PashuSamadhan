@@ -1,11 +1,10 @@
 Flask
-gunicorn  # Yeh production server hai
+gunicorn
 tensorflow
 scikit-learn
 pandas
 joblib
 numpy
-opencv-python-headless # Headless version server ke liye best hai
+opencv-python-headless
 xgboost
 lightgbm
-scikit-learn==1.4.2
