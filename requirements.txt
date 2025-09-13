@@ -6,3 +6,4 @@ pandas
 joblib
 numpy
 opencv-python-headless # Headless version server ke liye best hai
+xgboost
